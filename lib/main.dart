@@ -47,7 +47,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  String val;
+  String val = '';
   StreamSubscription<ConnectivityResult> subscription;
   
   @override
@@ -98,7 +98,7 @@ class _MyHomePageState extends State<MyHomePage> {
       body: Container(
         width: double.infinity,
         child: Center(
-          child: Text(val),
+          child: Text(val.isEmpty ? '' : val),
         ),
       ),// This trailing comma makes auto-formatting nicer for build methods.
     );
